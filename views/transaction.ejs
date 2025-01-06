@@ -1,0 +1,27 @@
+<!-- views/transaction.ejs -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLoop - Transaction</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Effectuer une transaction</h2>
+        <form action="/api/transaction" method="POST">
+            <label for="amount">Montant à payer (en USD) :</label>
+            <input type="number" name="amount" id="amount" required>
+
+            <button type="submit">Payer</button>
+        </form>
+
+        <a href="/">Retour à l'accueil</a>
+    </div>
+    <footer>
+        <p>&copy; 2025 EcoLoop. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

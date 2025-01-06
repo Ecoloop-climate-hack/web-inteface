@@ -1,0 +1,38 @@
+<!-- views/report.ejs -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLoop - Rapport pour <%= company %></title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Rapport de recyclage pour <%= company %></h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Quantité (kg)</th>
+                    <th>Recyclé</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% report.forEach(function(plastic) { %>
+                    <tr>
+                        <td><%= plastic.quantity %></td>
+                        <td><%= plastic.recycled ? 'Oui' : 'Non' %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+        <a href="/">Retour à l'accueil</a>
+    </div>
+    <footer>
+        <p>&copy; 2025 EcoLoop. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

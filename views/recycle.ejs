@@ -1,0 +1,28 @@
+<!-- views/recycle.ejs -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLoop - Recyclage</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Déclarer des plastiques recyclés</h2>
+        <form action="/api/recycle" method="POST">
+            <label for="company">Nom de l'entreprise :</label>
+            <input type="text" name="company" id="company" required>
+            
+            <label for="quantity">Quantité de plastique (en kg) :</label>
+            <input type="number" name="quantity" id="quantity" required>
+            
+            <button type="submit">Soumettre</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 EcoLoop. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
